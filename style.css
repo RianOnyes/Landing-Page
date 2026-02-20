@@ -1,115 +1,187 @@
-/* Desain CSS Modern */
+/* =========================================
+   TEMA GLOW IN THE DARK (CYBERPUNK NEON)
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
 :root {
-    --primary: #1e3a8a; /* Biru Gelap Elegan */
-    --secondary: #3b82f6; /* Biru Terang */
-    --bg: #f3f4f6;
-    --text: #1f2937;
-    --card-bg: #ffffff;
+    --bg-dark: #0a0a12;
+    --card-dark: #121220;
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+    --neon-green: #39ff14;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --arabic-font: 'Traditional Arabic', 'Amiri', serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    background-image: radial-gradient(circle at 50% 0%, #1a1a3a 0%, #0a0a12 60%);
+    background-attachment: fixed;
 }
 
-header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 4rem 1rem 5rem;
+/* Header & Glow Effects */
+.neon-header {
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 4rem 1rem 5rem;
+    border-bottom: 2px solid var(--neon-blue);
+    box-shadow: 0 5px 25px rgba(0, 243, 255, 0.2);
+    background: rgba(18, 18, 32, 0.7);
 }
 
-header h1 {
+.glow-text {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-size: 3rem;
     margin: 0;
-    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+}
+
+.neon-header p {
+    font-size: 1.3rem;
+    color: var(--neon-blue);
+    margin-top: 10px;
     letter-spacing: 1px;
 }
 
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-top: 10px;
+.neon-header .dosen {
+    color: var(--neon-purple);
+    font-weight: 600;
 }
 
+/* Container & Cards */
 .container {
     max-width: 900px;
-    margin: -50px auto 40px;
+    margin: -40px auto 40px;
     padding: 0 20px;
     position: relative;
     z-index: 10;
 }
 
-.card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    transition: transform 0.3s ease;
+.glow-card {
+    background-color: var(--card-dark);
+    border-radius: 15px;
+    padding: 35px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
 }
 
-.card:hover {
+.border-blue {
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1), inset 0 0 20px rgba(0, 243, 255, 0.05);
+}
+
+.border-blue:hover {
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.4), inset 0 0 30px rgba(0, 243, 255, 0.1);
     transform: translateY(-5px);
 }
 
-.tag {
-    background-color: #ef4444;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 999px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 20px;
+.border-purple {
+    border: 1px solid var(--neon-purple);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.1), inset 0 0 20px rgba(188, 19, 254, 0.05);
 }
 
-h2 {
-    color: var(--primary);
-    margin-top: 0;
-    border-bottom: 2px solid var(--bg);
+.border-purple:hover {
+    box-shadow: 0 0 25px rgba(188, 19, 254, 0.4), inset 0 0 30px rgba(188, 19, 254, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Headings */
+.neon-blue {
+    color: var(--neon-blue);
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+    border-bottom: 1px dashed var(--neon-blue);
     padding-bottom: 10px;
-    font-size: 1.8rem;
+}
+
+.neon-purple {
+    color: var(--neon-purple);
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 8px rgba(188, 19, 254, 0.6);
+    border-bottom: 1px dashed var(--neon-purple);
+    padding-bottom: 10px;
 }
 
 h3 {
-    color: var(--secondary);
-    margin-top: 30px;
+    color: #fff;
     font-size: 1.4rem;
+    margin-top: 25px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
-.reason-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.reason-list li {
-    background: var(--bg);
-    margin-bottom: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid var(--secondary);
-}
-
-.reason-list strong {
-    color: var(--primary);
-    display: block;
-    margin-bottom: 5px;
+/* Elements */
+ul {
     font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: var(--neon-green);
+}
+
+.glow-tag {
+    background-color: transparent;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Reason Box & Arabic Texts */
+.reason-box {
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 4px solid var(--neon-blue);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.arabic-text {
+    font-family: var(--arabic-font);
+    font-size: 2.2rem;
+    text-align: right;
+    direction: rtl;
+    color: #ffd700; /* Warna emas agar kontras di mode gelap */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    margin: 20px 0;
+    line-height: 2;
+}
+
+.translation {
+    font-style: italic;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 2px solid var(--neon-purple);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-top: 40px;
+    padding: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-@media (max-width: 600px) {
-    .card { padding: 20px; }
-    header h1 { font-size: 2rem; }
+.glow-text-small {
+    color: var(--text-muted);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
 }
