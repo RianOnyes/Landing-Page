@@ -1,0 +1,115 @@
+/* Desain CSS Modern */
+:root {
+    --primary: #1e3a8a; /* Biru Gelap Elegan */
+    --secondary: #3b82f6; /* Biru Terang */
+    --bg: #f3f4f6;
+    --text: #1f2937;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 4rem 1rem 5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary);
+    margin-top: 0;
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: var(--secondary);
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.reason-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reason-list li {
+    background: var(--bg);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary);
+}
+
+.reason-list strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .card { padding: 20px; }
+    header h1 { font-size: 2rem; }
+}
