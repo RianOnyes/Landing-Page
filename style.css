@@ -24,9 +24,7 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -43,41 +41,28 @@ h1, h2, h3, h4, h5 {
 
 /* Background Blobs Animasi */
 .bg-shape {
-    position: absolute;
-    filter: blur(100px);
-    z-index: -1;
-    opacity: 0.5;
+    position: absolute; filter: blur(100px); z-index: -1; opacity: 0.5;
 }
 .bg-shape-1 {
-    top: -10%; left: -10%;
-    width: 500px; height: 500px;
-    background: #a7f3d0;
-    border-radius: 50%;
+    top: -10%; left: -10%; width: 500px; height: 500px;
+    background: #a7f3d0; border-radius: 50%;
 }
 .bg-shape-2 {
-    top: 20%; right: -10%;
-    width: 400px; height: 400px;
-    background: #fde68a;
-    border-radius: 50%;
+    top: 20%; right: -10%; width: 400px; height: 400px;
+    background: #fde68a; border-radius: 50%;
 }
 
 /* --- NAVBAR --- */
 .navbar {
-    position: fixed;
-    top: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
+    position: fixed; top: 0; width: 100%;
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border); z-index: 1000;
 }
 .nav-container {
-    max-width: 1100px; margin: 0 auto;
-    padding: 18px 20px;
+    max-width: 1100px; margin: 0 auto; padding: 18px 20px;
     display: flex; justify-content: space-between; align-items: center;
 }
-.logo {
-    font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none;
-}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
 .logo span { color: var(--primary); }
 .nav-links { list-style: none; display: flex; gap: 30px; }
 .nav-links a {
@@ -87,22 +72,16 @@ h1, h2, h3, h4, h5 {
 
 /* --- HERO --- */
 .hero {
-    min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
     padding: 100px 20px 20px;
 }
 .glass-card {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(20px);
-    padding: 60px 40px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: var(--shadow-lg);
-    max-width: 800px; text-align: center;
+    background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px);
+    padding: 60px 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-lg); max-width: 800px; text-align: center;
 }
 .badge {
-    background: #ecfdf5; color: var(--primary);
-    padding: 6px 16px; border-radius: 50px;
+    background: #ecfdf5; color: var(--primary); padding: 6px 16px; border-radius: 50px;
     font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
 }
 .hero h1 { font-size: 3rem; margin: 25px 0 15px; }
@@ -111,8 +90,7 @@ h1, h2, h3, h4, h5 {
 
 .hero-buttons { display: flex; gap: 15px; justify-content: center; }
 .btn {
-    padding: 14px 32px; border-radius: 12px;
-    text-decoration: none; font-weight: 600; font-size: 1rem;
+    padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(5, 150, 105, 0.2); }
@@ -149,6 +127,7 @@ h1, h2, h3, h4, h5 {
     background: var(--bg-card); padding: 30px; border-radius: 20px;
     box-shadow: var(--shadow-sm); border: 1px solid var(--border);
     transition: transform 0.3s;
+    align-self: start;
 }
 .materi-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
 .icon-box { font-size: 2.5rem; margin-bottom: 20px; }
@@ -158,14 +137,21 @@ h1, h2, h3, h4, h5 {
 /* Menyembunyikan checkbox */
 .toggle-checkbox { display: none; }
 
-/* Konten yang disembunyikan */
+/* Konten yang disembunyikan (Update max-height agar teks panjang tidak terpotong) */
 .materi-content {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease-in-out;
 }
-.materi-content p { background: #ecfdf5; padding: 15px; border-radius: 10px; color: var(--text-dark); margin-bottom: 20px; border-left: 4px solid var(--primary); }
+.content-inner {
+    background: #ecfdf5; padding: 25px; border-radius: 12px;
+    color: var(--text-dark); margin-bottom: 25px; border-left: 5px solid var(--primary);
+}
+.content-inner h4 { margin-top: 15px; margin-bottom: 10px; color: var(--primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; }
+.content-inner h4:first-child { margin-top: 0; }
+.content-inner p, .content-inner li { margin-bottom: 10px; font-size: 0.95rem; }
+.content-inner ul { margin-left: 20px; }
 
 /* Tombol Baca */
 .btn-toggle {
@@ -176,12 +162,10 @@ h1, h2, h3, h4, h5 {
     transition: all 0.3s;
 }
 .btn-toggle:hover { background: var(--primary); color: white; border-color: var(--primary); }
-
-/* Teks tombol default */
 .close-text { display: none; }
 
 /* --- EFEK KETIKA TOMBOL DIKLIK (CHECKBOX CHECKED) --- */
-.toggle-checkbox:checked ~ .materi-content { max-height: 500px; opacity: 1; margin-bottom: 20px; }
+.toggle-checkbox:checked ~ .materi-content { max-height: 2000px; opacity: 1; }
 .toggle-checkbox:checked ~ .btn-toggle { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
 .toggle-checkbox:checked ~ .btn-toggle .open-text { display: none; }
 .toggle-checkbox:checked ~ .btn-toggle .close-text { display: inline; }
@@ -194,14 +178,14 @@ h1, h2, h3, h4, h5 {
 .case-header { margin-bottom: 30px; text-align: center; }
 .case-header .tag { background: #fffbeb; color: var(--secondary); padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; }
 .case-header h3 { font-size: 2.2rem; margin-top: 15px; }
-.case-desc { font-size: 1.1rem; color: var(--text-dark); padding: 25px; background: var(--bg-main); border-radius: 16px; margin-bottom: 40px; }
+.case-desc { font-size: 1.1rem; color: var(--text-dark); padding: 25px; background: var(--bg-main); border-radius: 16px; margin-bottom: 40px; border-left: 4px solid var(--secondary); }
 
 .reason-item { margin-bottom: 40px; }
 .reason-item h5 { font-size: 1.3rem; color: var(--primary); margin-bottom: 10px; }
 .reason-item p { color: var(--text-light); }
 
 .arabic { font-family: var(--arabic-font); font-size: 2.2rem; text-align: right; direction: rtl; color: var(--secondary); margin: 20px 0; }
-.terjemahan { font-style: italic; color: var(--text-light); background: var(--bg-main); padding: 15px 20px; border-radius: 12px; border-left: 3px solid var(--secondary); }
+.terjemahan { font-style: italic; color: var(--text-light); background: var(--bg-main); padding: 15px 20px; border-radius: 12px; }
 
 .daftar-pustaka { margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); }
 .daftar-pustaka h4 { margin-bottom: 15px; font-size: 1.2rem; }
