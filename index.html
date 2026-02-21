@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan PAI 6 | Profil & Tugas</title>
+    <title>Perpustakaan PAI 6 | Portofolio Modern</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#beranda" class="logo">PAI<span>.6</span></a>
+            <a href="#beranda" class="logo">Ruang<span>PAI.</span></a>
             <ul class="nav-links">
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#profil">Profil</a></li>
@@ -23,117 +26,127 @@
     </nav>
 
     <section id="beranda" class="hero">
-        <div class="hero-content">
+        <div class="hero-content glass-card">
             <span class="badge">Universitas Pelita Bangsa</span>
             <h1>Pendidikan Agama Islam 6</h1>
-            <p>Perpustakaan digital dan portofolio tugas. Mengkaji makna Syahadatain dan implementasinya dalam menjawab tantangan umat di era modern.</p>
+            <p>Eksplorasi makna Syahadatain dan implementasinya dalam menjawab tantangan aqidah umat di era digital.</p>
             <p class="dosen">Dosen Pengampu: <strong>Ir. M. Zubair Abdurrohman, S.T., M.T.</strong></p>
             <div class="hero-buttons">
                 <a href="#profil" class="btn btn-primary">Lihat Profil</a>
-                <a href="#studi-kasus" class="btn btn-outline">Lihat Tugas 1</a>
+                <a href="#studi-kasus" class="btn btn-secondary">Tugas Studi Kasus</a>
             </div>
         </div>
     </section>
 
-    <section id="profil" class="section bg-darker">
+    <section id="profil" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
                 <h2>Profil Mahasiswa</h2>
-                <p>Kreator di balik portofolio ini</p>
+                <p>Kreator di balik portofolio digital ini</p>
             </div>
             <div class="profile-card">
-                <div class="profile-img-container">
-                    <img src="https://ui-avatars.com/api/?name=Nama+Kamu&background=fbbf24&color=0f172a&size=150" alt="Foto Profil" class="profile-img">
-                </div>
+                <img src="https://ui-avatars.com/api/?name=Nama+Kamu&background=059669&color=ffffff&size=150" alt="Foto Profil" class="profile-img">
                 <div class="profile-info">
                     <h3>[Nama Lengkap Kamu]</h3>
                     <p class="role">Mahasiswa Teknik Informatika - S1</p>
-                    <ul class="bio-list">
-                        <li><strong>NIM:</strong> 1234567890</li>
-                        <li><strong>Fakultas:</strong> Fakultas Teknik</li>
-                        <li><strong>Universitas:</strong> Universitas Pelita Bangsa</li>
-                        <li><strong>Mata Kuliah:</strong> Pendidikan Agama Islam 6</li>
-                    </ul>
-                    <p class="bio-text">"Portofolio ini saya bangun sebagai bentuk digitalisasi tugas perkuliahan, sekaligus wadah untuk mengarsipkan materi-materi akidah dan syariat Islam agar mudah diakses dan dipelajari kembali."</p>
+                    <div class="bio-grid">
+                        <div class="bio-item"><span>NIM:</span> 1234567890</div>
+                        <div class="bio-item"><span>Fakultas:</span> Teknik</div>
+                        <div class="bio-item"><span>Kampus:</span> Pelita Bangsa</div>
+                    </div>
+                    <p class="bio-text">"Saya membangun portofolio ini sebagai bentuk digitalisasi tugas perkuliahan, sekaligus wadah untuk mengarsipkan materi-materi akidah agar mudah diakses dan dipelajari."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="materi" class="section">
+    <section id="materi" class="section bg-light">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
                 <h2>Pembahasan Materi</h2>
-                <p>Klik judul di bawah ini untuk membuka atau menutup materi</p>
+                <p>Klik tombol untuk membaca detail materi pertemuan 1-2</p>
             </div>
             
-            <div class="accordion-container">
-                <details class="accordion-box">
-                    <summary class="accordion-title">
-                        <span>📖 Makna Syahadatain</span>
-                        <span class="icon">+</span>
-                    </summary>
-                    <div class="accordion-content">
+            <div class="materi-grid">
+                
+                <div class="materi-card">
+                    <div class="icon-box">📖</div>
+                    <h3>Makna Syahadatain</h3>
+                    <p class="intro-text">Syahadatain adalah inti ajaran Islam yang menuntut i'tikad dan ikrar lisan yang kuat.</p>
+                    
+                    <input type="checkbox" id="toggle-1" class="toggle-checkbox">
+                    <div class="materi-content">
                         <p>Beri'tikad dan berikrar bahwa tidak ada yang berhak disembah kecuali Allah. <em>La ilaaha</em> menafikan hak penyembahan dari selain Allah, dan <em>Illallah</em> menetapkan hak Allah semata untuk disembah.</p>
                     </div>
-                </details>
+                    
+                    <label for="toggle-1" class="btn-toggle">
+                        <span class="open-text">Baca Selengkapnya</span>
+                        <span class="close-text">Tutup Materi</span>
+                    </label>
+                </div>
 
-                <details class="accordion-box">
-                    <summary class="accordion-title">
-                        <span>🗝️ Urgensi Syahadatain</span>
-                        <span class="icon">+</span>
-                    </summary>
-                    <div class="accordion-content">
-                        <p>Merupakan intisari ajaran Islam dan gerbang pintu masuknya. Syahadatain adalah azas perubahan (inqilab) yang dimulai dari merubah keyakinan di dalam jiwa menuju cahaya Islam.</p>
-                    </div>
-                </details>
-
-                <details class="accordion-box">
-                    <summary class="accordion-title">
-                        <span>🏛️ Rukun Syahadat</span>
-                        <span class="icon">+</span>
-                    </summary>
-                    <div class="accordion-content">
+                <div class="materi-card">
+                    <div class="icon-box">🏛️</div>
+                    <h3>Rukun Syahadat</h3>
+                    <p class="intro-text">Kalimat Tauhid memiliki rukun yang menjadi fondasi utamanya.</p>
+                    
+                    <input type="checkbox" id="toggle-2" class="toggle-checkbox">
+                    <div class="materi-content">
                         <p>Terdapat dua rukun utama: <strong>An-Nafyu</strong> (meniadakan sesembahan selain Allah) dan <strong>Al-Itsbat</strong> (menetapkan ibadah hanya untuk Allah). Serta mengakui Nabi Muhammad sebagai utusan-Nya tanpa mengkultuskan.</p>
                     </div>
-                </details>
+                    
+                    <label for="toggle-2" class="btn-toggle">
+                        <span class="open-text">Baca Selengkapnya</span>
+                        <span class="close-text">Tutup Materi</span>
+                    </label>
+                </div>
 
-                <details class="accordion-box">
-                    <summary class="accordion-title">
-                        <span>✅ Syarat Sah Syahadat</span>
-                        <span class="icon">+</span>
-                    </summary>
-                    <div class="accordion-content">
+                <div class="materi-card">
+                    <div class="icon-box">✅</div>
+                    <h3>Syarat Sah Syahadat</h3>
+                    <p class="intro-text">Syarat mutlak agar syahadat seseorang diterima dan bermanfaat.</p>
+                    
+                    <input type="checkbox" id="toggle-3" class="toggle-checkbox">
+                    <div class="materi-content">
                         <p>Syahadat tidak bermanfaat jika tidak memenuhi 7 syarat: Ilmu (mengetahui), Yakin, Qabul (menerima), Inqiyad (patuh), Shidq (jujur), Ikhlash, dan Mahabbah (cinta).</p>
                     </div>
-                </details>
+                    
+                    <label for="toggle-3" class="btn-toggle">
+                        <span class="open-text">Baca Selengkapnya</span>
+                        <span class="close-text">Tutup Materi</span>
+                    </label>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="studi-kasus" class="section bg-darker">
+    <section id="studi-kasus" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Studi Kasus (Tugas 1)</h2>
-                <p>Praktik Pembatal Syahadatain di Internet</p>
+            <div class="section-header text-center">
+                <h2>Studi Kasus Pembatal Syahadat</h2>
+                <p>Tugas Portofolio 1 - Praktik di Era Digital</p>
             </div>
 
-            <article class="case-study-box">
-                <span class="tag">Analisis Kasus</span>
-                <h3>Fenomena Jasa Ramal Nasib & Zodiak Online</h3>
-                <p class="case-desc"><strong>Deskripsi:</strong> Di era digital saat ini, marak bermunculan akun di media sosial yang menawarkan jasa ramal nasib menggunakan kartu tarot atau praktik perdukunan modern berkedok konsultasi spiritual. Banyak warganet yang menggantungkan keputusan hidup mereka pada ramalan tersebut.</p>
+            <div class="case-study-card">
+                <div class="case-header">
+                    <span class="tag">Analisis Kasus</span>
+                    <h3>Fenomena Jasa Ramal Nasib & Zodiak Online</h3>
+                </div>
                 
-                <div class="case-points">
-                    <h4>Landasan Syar'i Pembatal Syahadat:</h4>
+                <p class="case-desc"><strong>Deskripsi:</strong> Maraknya bermunculan akun di media sosial yang menawarkan jasa ramal nasib menggunakan kartu tarot atau perdukunan modern. Banyak warganet yang menggantungkan keputusan hidup mereka pada ramalan tersebut.</p>
+                
+                <div class="case-body">
+                    <h4>Landasan Syar'i (Mengapa membatalkan Syahadat):</h4>
                     
-                    <div class="reason">
+                    <div class="reason-item">
                         <h5>1. Syirik dalam Beribadah</h5>
                         <p>Menggantungkan nasib pada ramalan mencederai tauhid karena menyekutukan Allah dalam perkara gaib. Allah berfirman:</p>
                         <div class="arabic">إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُوْنَ ذَلِكَ لِمَنْ يَّشَاءُ</div>
                         <div class="terjemahan">"Sesungguhnya Allah tidak akan mengampuni dosa syirik, dan Dia mengampuni segala dosa yang selain dari (syirik) itu, bagi siapa yang dikehendakiNya." <strong>(QS. An-Nisa: 48)</strong></div>
                     </div>
 
-                    <div class="reason">
+                    <div class="reason-item">
                         <h5>2. Termasuk Kategori Sihir</h5>
                         <p>Praktik meramal memiliki kedekatan dengan ilmu sihir. Barangsiapa meridhainya, maka ia terancam kekufuran. Allah berfirman:</p>
                         <div class="arabic">وَمَا يُعَلِّمُنِ مِنْ أَحَدٍ حَتَّى يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ</div>
@@ -141,39 +154,36 @@
                     </div>
                 </div>
 
-                <hr class="divider">
-
                 <div class="daftar-pustaka">
                     <h4>Daftar Pustaka</h4>
                     <ul>
                         <li>Almanhaj. (n.d.). <em>Makna Syahadatain, Rukun, Syarat, Konsekuensi dan yang Membatalkannya</em>.</li>
                         <li>Jasiman, Lc. (2009). <em>Syarh Rasmul Bayan Tarbiyah</em>. Surakarta: Aulia Press.</li>
-                        <li>Kementerian Agama Saudi Arabia. <em>Tafsir Al-Muyassar</em>.</li>
                         <li>Materi PAI 6 oleh Ir. M. Zubair Abdurrohman, S.T., M.T.</li>
                     </ul>
                 </div>
-            </article>
+            </div>
         </div>
     </section>
 
-    <section id="kontak" class="section">
+    <section id="kontak" class="section bg-light">
         <div class="container text-center">
             <div class="section-header">
-                <h2>Kontak Saya</h2>
-                <p>Mari berdiskusi lebih lanjut</p>
+                <h2>Hubungi Saya</h2>
+                <p>Punya pertanyaan atau ingin berdiskusi?</p>
             </div>
-            <div class="contact-box">
-                <p>Untuk keperluan diskusi tugas, perbaikan materi, atau pertanyaan seputar portofolio ini, silakan hubungi:</p>
+            <div class="contact-card">
+                <p class="contact-text">Silakan hubungi saya melalui detail di bawah ini untuk keperluan diskusi materi perkuliahan.</p>
                 <div class="contact-details">
-                    <p>📧 Email: <strong>email_kamu@pelitabangsa.ac.id</strong></p>
-                    <p>💻 GitHub: <strong>github.com/username-kamu</strong></p>
+                    <p>📧 <strong>email_kamu@pelitabangsa.ac.id</strong></p>
+                    <p>💻 <strong>github.com/username-kamu</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 - Didesain untuk Tugas Mata Kuliah Pendidikan Agama Islam 6</p>
+        <p>&copy; 2026 - Perpustakaan Digital PAI 6 | Desain Modern</p>
     </footer>
 
 </body>
