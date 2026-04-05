@@ -28,18 +28,33 @@
             <h1>Pendidikan Agama Islam 6</h1>
             <p>Portofolio digital ini didedikasikan untuk mengkaji secara mendalam permasalahan akidah umat di era modern, dengan berlandaskan pada kemurnian tauhid dan syariat Islam.</p>
             <p class="dosen">Dosen Pengampu: <br><strong>Ir. M. Zubair Abdurrohman, S.T., M.T.</strong></p>
-            <div class="hero-buttons">
-                <div class="dropdown">
-                    <button class="btn btn-accent dropdown-toggle" onclick="toggleDropdown()">&#9776; Lihat Materi</button>
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="#pertemuan-1" onclick="closeDropdown()">&#8601; Pertemuan 1 &ndash; Studi Kasus</a>
-                        <a href="#pertemuan-2" onclick="closeDropdown()">&#8601; Pertemuan 2 &ndash; Syahadatain</a>
-                        <a href="#pertemuan-3" onclick="closeDropdown()">&#8601; Pertemuan 3 &ndash; Hakikat Manusia</a>
-                        <a href="#pertemuan-4" onclick="closeDropdown()">&#8601; Pertemuan 4 &ndash; Keutamaan Al-Qur'an</a>
+            
+            <div class="biodata-card" style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--accent-blue); padding: 15px 30px; border-radius: 8px; display: inline-block; margin-bottom: 40px; box-shadow: 0 4px 15px var(--accent-glow); text-align: center;">
+                <h3 style="margin: 0; font-size: 1.3rem; color: #fff; font-family: 'Inter', sans-serif;">Rian Hasannudin</h3>
+                <p style="margin: 5px 0 0; font-size: 0.95rem; color: var(--text-muted); font-weight: 400;">NIM : 312310045 | Universitas Pelita Bangsa</p>
+            </div>
+                <div class="material-nav-container">
+                    <div class="material-nav-buttons">
+                        <button class="m-nav-btn active" onclick="switchMateri('pertemuan-1', this)">Pertemuan 1</button>
+                        <button class="m-nav-btn" onclick="switchMateri('pertemuan-2', this)">Pertemuan 2</button>
+                        <button class="m-nav-btn" onclick="switchMateri('pertemuan-3', this)">Pertemuan 3</button>
+                        <button class="m-nav-btn" onclick="switchMateri('pertemuan-4', this)">Pertemuan 4</button>
+                        <button class="m-nav-btn" onclick="switchMateri('pertemuan-5', this)">Pertemuan 5</button>
                     </div>
                 </div>
-                <a href="#metodologi" class="btn btn-outline">Metodologi</a>
-            </div>
+                <div class="hero-buttons">
+                    <div class="dropdown">
+                        <button class="btn btn-accent dropdown-toggle" onclick="toggleDropdown()">&#9776; Pilih Materi</button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="javascript:void(0)" onclick="switchMateri('pertemuan-1'); closeDropdown()">&#8601; Pertemuan 1 &ndash; Studi Kasus</a>
+                            <a href="javascript:void(0)" onclick="switchMateri('pertemuan-2'); closeDropdown()">&#8601; Pertemuan 2 &ndash; Syahadatain</a>
+                            <a href="javascript:void(0)" onclick="switchMateri('pertemuan-3'); closeDropdown()">&#8601; Pertemuan 3 &ndash; Hakikat Manusia</a>
+                            <a href="javascript:void(0)" onclick="switchMateri('pertemuan-4'); closeDropdown()">&#8601; Pertemuan 4 &ndash; Keutamaan Al-Qur'an</a>
+                            <a href="javascript:void(0)" onclick="switchMateri('pertemuan-5'); closeDropdown()">&#8601; Pertemuan 5 &ndash; Kisah dalam Al-Qur'an</a>
+                        </div>
+                    </div>
+                    <a href="#metodologi" class="btn btn-outline">Metodologi</a>
+                </div>
         </div>
     </section>
 
@@ -422,6 +437,81 @@
         </div>
     </section>
 
+    <!-- SECTION PERTEMUAN 5 -->
+    <section id="pertemuan-5" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Materi Pertemuan Ke-5</span>
+                <h2>Kisah-Kisah dalam Al-Qur'an</h2>
+                <div class="divider-accent"></div>
+            </div>
+
+            <div class="case-study-card">
+                <div class="case-header">
+                    <h3>Hikmah dan Pelajaran (Ibrah) Umat Terdahulu</h3>
+                </div>
+
+                <div class="case-desc">
+                    <p><strong>Ringkasan Inti:</strong> Al-Qur'an memuat banyak kisah umat terdahulu dan para Nabi. Kisah-kisah ini bukan sekadar dongeng atau catatan sejarah semata, melainkan sarana peneguhan hati, pelajaran moral, serta bukti kebenaran risalah Islam bagi umat manusia di setiap zaman.</p>
+                </div>
+
+                <div class="case-body">
+
+                    <h4 class="case-title">1. Tujuan Pemaparan Kisah dalam Al-Qur'an</h4>
+                    <div class="reason-item">
+                        <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><strong>Meneguhkan Hati:</strong> Menguatkan hati Rasulullah SAW dan kaum mukminin dalam menghadapi berbagai ujian dan rintangan dakwah.</li>
+                            <li style="margin-bottom: 10px;"><strong>Pelajaran (Ibrah):</strong> Mengambil hikmah dari kehancuran umat terdahulu yang mendustakan para nabi, serta kemenangan bagi orang yang bertakwa.</li>
+                            <li><strong>Bukti Kerasulan:</strong> Membuktikan kebenaran Nabi Muhammad SAW, karena beliau yang tidak bisa baca tulis (<em>ummi</em>) mampu mengisahkan peristiwa masa lalu secara akurat murni dari wahyu.</li>
+                        </ul>
+                        <div class="arabic">لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ لِّأُولِي الْأَلْبَابِ ۗ مَا كَانَ حَدِيثًا يُفْتَرَىٰ</div>
+                        <div class="terjemahan">"Sesungguhnya pada kisah-kisah mereka itu terdapat pengajaran bagi orang-orang yang mempunyai akal. Al Quran itu bukanlah cerita yang dibuat-buat..." <strong>(QS. Yusuf: 111)</strong></div>
+                    </div>
+
+                    <h4 class="case-title">2. Kisah Ashabul Kahfi: Keteguhan Akidah Pemuda</h4>
+                    <div class="reason-item">
+                        <p>Kisah sekelompok pemuda yang bersembunyi di dalam gua untuk menyelamatkan iman mereka dari penguasa yang musyrik. Allah menidurkan mereka selama lebih dari 300 tahun.</p>
+                        <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><strong>Hikmah:</strong> Pemuda adalah kekuatan perubahan jika dilandasi akidah yang lurus.</li>
+                            <li style="margin-bottom: 10px;"><strong>Perlindungan Allah:</strong> Allah Maha Mampu melindungi hamba-hamba-Nya meskipun kondisi terlihat mustahil.</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="case-title">3. Kisah Nabi Musa dan Fir'aun: Kesombongan vs Kebenaran</h4>
+                    <div class="reason-item">
+                        <p>Pertarungan epik antara Nabi Musa AS yang membawa mukjizat ilahiah melawan Fir'aun yang memproklamirkan dirinya sebagai tuhan. Meskipun memiliki kekuasaan mutlak, Fir'aun akhirnya binasa tenggelam di Laut Merah.</p>
+                        <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><strong>Hikmah:</strong> Kekuasaan dan harta tidak akan mampu melawan ketetapan Allah. Keangkuhan manusia hanya akan membawa pada kehancuran.</li>
+                            <li style="margin-bottom: 10px;"><strong>Kesabaran:</strong> Perjuangan menegakkan kebenaran butuh kesabaran dan keyakinan total kepada pertolongan Allah.</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="case-title">4. Kisah Luqman Al-Hakim: Pendidikan Integritas Keluarga</h4>
+                    <div class="reason-item">
+                        <p>Seorang ayah saleh yang diabadikan nasihatnya kepada putranya. Ia bukan seorang Nabi, namun dikaruniai kebijaksanaan (<em>Al-Hikmah</em>).</p>
+                        <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px; margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><strong>Prioritas Tauhid:</strong> Nasihat pertama dan utama adalah larangan berbuat kesyirikan <em>(La tusyrik billah)</em>.</li>
+                            <li style="margin-bottom: 10px;"><strong>Adab Bersosial:</strong> Larangan bersikap sombong pada sesama, berjalan dengan angkuh, serta anjuran untuk melunakkan suara.</li>
+                        </ul>
+                        <div class="arabic">وَإِذْ قَالَ لُقْمَانُ لِابْنِهِ وَهُوَ يَعِظُهُ يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ ۖ إِنَّ الشِّرْكَ لَظُلْمٌ عَظِيمٌ</div>
+                        <div class="terjemahan">"Dan (ingatlah) ketika Luqman berkata kepada anaknya, di waktu ia memberi pelajaran kepadanya: 'Hai anakku, janganlah kamu mempersekutukan Allah, sesungguhnya mempersekutukan (Allah) adalah benar-benar kezaliman yang besar'." <strong>(QS. Luqman: 13)</strong></div>
+                    </div>
+
+                </div>
+
+                <div class="daftar-pustaka">
+                    <h4>Daftar Pustaka</h4>
+                    <ul>
+                        <li>Al-Qur'an Al-Karim (Surah Yusuf, Al-Kahfi, Thaha, Luqman).</li>
+                        <li>Quthb, Sayyid. <em>Tafsir Fi Zhilalil Qur'an</em>.</li>
+                        <li>Ibnu Katsir. <em>Kisah Para Nabi (Qashashul Anbiya)</em>.</li>
+                        <li>Rangkuman materi: Kisah dalam Al-Qur'an sebagai referensi ibrah.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- DAFTAR PUSTAKA GABUNGAN -->
     <section id="daftar-pustaka" class="section">
         <div class="container">
@@ -545,9 +635,64 @@ function toggleDropdown() {
 function closeDropdown() {
     document.getElementById('dropdownMenu').classList.remove('open');
 }
+
+// Function to switch materials with rollover effect support
+function switchMateri(targetId, element) {
+    console.log("Switching to:", targetId);
+    
+    // Hide all pertemuan sections
+    const sections = ['pertemuan-1', 'pertemuan-2', 'pertemuan-3', 'pertemuan-4', 'pertemuan-5'];
+    sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.classList.remove('materi-active');
+            section.classList.add('materi-hidden');
+        }
+    });
+
+    // Show the target section
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+        targetSection.classList.remove('materi-hidden');
+        targetSection.classList.add('materi-active');
+    }
+
+    // Update active state on buttons
+    const buttons = document.querySelectorAll('.m-nav-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    if (element) {
+        element.classList.add('active');
+    } else {
+        // If triggered from dropdown, find the corresponding nav button
+        const correspondingBtn = document.querySelector(`.m-nav-btn[onclick*="${targetId}"]`);
+        if (correspondingBtn) correspondingBtn.classList.add('active');
+    }
+
+    // Optional: Scroll to content area on mobile
+    if (window.innerWidth <= 768 && targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Hover "Rollover" Preview (Optional - can be enabled if desired)
+const navButtons = document.querySelectorAll('.m-nav-btn');
+navButtons.forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        // Logic for rollover preview could go here
+        // For now, we'll stick to click-to-switch as primary behavior
+    });
+});
+
+// Initialize first section
+document.addEventListener('DOMContentLoaded', function() {
+    // Start with Pertemuan 1 visible
+    switchMateri('pertemuan-1');
+});
+
 document.addEventListener('click', function(e) {
     const dropdown = document.querySelector('.dropdown');
-    if (!dropdown.contains(e.target)) {
+    if (dropdown && !dropdown.contains(e.target)) {
         closeDropdown();
     }
 });
